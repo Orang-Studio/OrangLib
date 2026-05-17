@@ -1,0 +1,255 @@
+.moderation-panel {
+  background: linear-gradient(135deg, rgba(42, 42, 42, 0.5) 0%, rgba(35, 35, 40, 0.3) 100%);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.moderation-panel h2 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.5rem;
+  color: #fff;
+  border-bottom: 2px solid rgba(255, 140, 0, 0.2);
+  padding-bottom: 1rem;
+}
+
+.moderation-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 0.6rem 1.2rem;
+  border: 2px solid rgba(255, 140, 0, 0.2);
+  border-radius: 6px;
+  background: transparent;
+  color: #a0a0a0;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  border-color: rgba(255, 140, 0, 0.4);
+  color: #ff8c00;
+}
+
+.tab-btn.active {
+  background: rgba(255, 140, 0, 0.15);
+  border-color: #ff8c00;
+  color: #ff8c00;
+}
+
+.moderation-search {
+  margin-bottom: 1.5rem;
+}
+
+.moderation-search input {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.8rem;
+  background: rgba(51, 51, 51, 0.6);
+  border: 2px solid rgba(255, 140, 0, 0.2);
+  border-radius: 6px;
+  color: white;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.moderation-search input::placeholder {
+  color: rgba(160, 160, 160, 0.5);
+}
+
+.moderation-search input:focus {
+  outline: none;
+  border-color: #ff8c00;
+  box-shadow: 0 0 15px rgba(255, 140, 0, 0.2);
+}
+
+.moderation-content {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.member-card {
+  background: rgba(51, 51, 51, 0.4);
+  border: 1px solid rgba(255, 140, 0, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: all 0.2s ease;
+}
+
+.member-card:hover {
+  border-color: rgba(255, 140, 0, 0.4);
+  background: rgba(60, 60, 60, 0.5);
+}
+
+.member-info h4 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+.member-role {
+  margin: 0.3rem 0 0 0;
+  color: #ffb74d;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.member-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.member-actions .btn {
+  width: 100%;
+  text-align: center;
+}
+
+.banned-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.banned-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(244, 67, 54, 0.1);
+  border: 1px solid rgba(244, 67, 54, 0.3);
+  border-radius: 8px;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+.banned-info h4 {
+  margin: 0 0 0.5rem 0;
+  color: #ef5350;
+  font-size: 1rem;
+}
+
+.banned-info p {
+  margin: 0;
+  color: #a0a0a0;
+  font-size: 0.9rem;
+}
+
+.pardon-section {
+  background: rgba(76, 175, 80, 0.1);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  color: #81c784;
+}
+
+.alert {
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  animation: slideDown 0.3s ease-out;
+}
+
+.alert-error {
+  background: rgba(244, 67, 54, 0.1);
+  border: 1px solid rgba(244, 67, 54, 0.3);
+  color: #ef9a9a;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+}
+
+.btn-info {
+  background: rgba(33, 150, 243, 0.1);
+  color: #64b5f6;
+  border: 2px solid rgba(33, 150, 243, 0.3);
+}
+
+.btn-info:hover {
+  border-color: #64b5f6;
+  background: rgba(33, 150, 243, 0.2);
+}
+
+.btn-secondary {
+  background: rgba(255, 140, 0, 0.1);
+  color: #ff8c00;
+  border: 2px solid rgba(255, 140, 0, 0.3);
+}
+
+.btn-secondary:hover {
+  border-color: #ff8c00;
+  background: rgba(255, 140, 0, 0.2);
+}
+
+.btn-danger {
+  background: rgba(244, 67, 54, 0.1);
+  color: #ef5350;
+  border: 2px solid rgba(244, 67, 54, 0.3);
+}
+
+.btn-danger:hover {
+  border-color: #ef5350;
+  background: rgba(244, 67, 54, 0.2);
+}
+
+.btn-success {
+  background: rgba(76, 175, 80, 0.1);
+  color: #81c784;
+  border: 2px solid rgba(76, 175, 80, 0.3);
+}
+
+.btn-success:hover {
+  border-color: #81c784;
+  background: rgba(76, 175, 80, 0.2);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

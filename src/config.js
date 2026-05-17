@@ -1,0 +1,2 @@
+const API_URL = import.meta.env.VITE_API_URL || (typeof window !== 'undefined' && window.location.hostname === 'localhost' ? 'http://127.0.0.1:8000' : 'https://api.oranges.lt');
+export default API_URL;

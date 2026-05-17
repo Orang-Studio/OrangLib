@@ -1,0 +1,320 @@
+.not-found-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.binary-background-404 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.not-found-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 100%;
+}
+
+.error-header {
+  text-align: center;
+}
+
+.error-code {
+  font-size: 6rem;
+  font-weight: 800;
+  margin: 0;
+  background: linear-gradient(135deg, #ff6600 0%, #ff9900 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+  text-shadow: 0 0 40px rgba(255, 102, 0, 0.3);
+}
+
+.error-message {
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0.5rem 0;
+  font-weight: 600;
+}
+
+.error-description {
+  color: #888;
+  margin: 0;
+  max-width: 400px;
+}
+
+
+.terminal-window {
+  background: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.8),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
+  width: fit-content;
+}
+
+.terminal-header {
+  background: linear-gradient(180deg, #3d3d3d 0%, #2d2d2d 100%);
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.terminal-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: default;
+}
+
+.terminal-btn.close {
+  background: #ff5f56;
+  border: 1px solid #e0443e;
+}
+
+.terminal-btn.minimize {
+  background: #ffbd2e;
+  border: 1px solid #dea123;
+}
+
+.terminal-btn.maximize {
+  background: #27c93f;
+  border: 1px solid #1aab29;
+}
+
+.terminal-title {
+  flex: 1;
+  text-align: center;
+  color: #999;
+  font-size: 13px;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+}
+
+.terminal-spacer {
+  width: 52px;
+}
+
+.terminal-body {
+  background: #0d0d0d;
+  padding: 12px;
+  font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Fira Code', 'Consolas', monospace;
+  font-size: 13px;
+}
+
+.terminal-prompt {
+  color: #fff;
+  margin-bottom: 8px;
+  white-space: nowrap;
+}
+
+.bottom-prompt {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.prompt-user {
+  color: #00ff00;
+  font-weight: 500;
+}
+
+.prompt-separator {
+  color: #fff;
+}
+
+.prompt-path {
+  color: #5c5cff;
+}
+
+.prompt-symbol {
+  color: #fff;
+}
+
+.prompt-command {
+  color: #00ff00;
+}
+
+.cursor {
+  color: #00ff00;
+  margin-left: 4px;
+}
+
+.game-container {
+  position: relative;
+  margin: 8px 0;
+}
+
+.game-stats {
+  display: flex;
+  justify-content: space-between;
+  color: #00ff00;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.stat {
+  padding: 2px 8px;
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid rgba(0, 255, 0, 0.2);
+  border-radius: 2px;
+}
+
+.game-canvas {
+  display: block;
+  border: 1px solid #00ff00;
+  background: #0a0a0a;
+}
+
+.game-overlay {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 1px solid #00ff00;
+}
+
+.overlay-text {
+  color: #00ff00;
+  font-size: 14px;
+  text-align: center;
+}
+
+.overlay-controls {
+  color: #666;
+  font-size: 11px;
+}
+
+.pause-text {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 4px;
+}
+
+.gameover-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff6600;
+  letter-spacing: 2px;
+}
+
+.game-overlay.gameover {
+  border-color: #ff6600;
+}
+
+.game-overlay.gameover .overlay-text {
+  color: #ff6600;
+}
+
+.final-score {
+  color: #fff;
+  font-size: 16px;
+}
+
+.blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+
+.not-found-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.back-home-btn,
+.browse-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.back-home-btn {
+  background: linear-gradient(135deg, #ff6600 0%, #ff8800 100%);
+  color: #fff;
+  border: none;
+}
+
+.back-home-btn:hover {
+  background: linear-gradient(135deg, #ff7711 0%, #ff9922 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 102, 0, 0.4);
+}
+
+.browse-btn {
+  background: transparent;
+  color: #ff6600;
+  border: 2px solid #ff6600;
+}
+
+.browse-btn:hover {
+  background: rgba(255, 102, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 480px) {
+  .error-code {
+    font-size: 4rem;
+  }
+  
+  .error-message {
+    font-size: 1.2rem;
+  }
+  
+  .terminal-window {
+    transform: scale(0.85);
+    transform-origin: center center;
+  }
+  
+  .not-found-page {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .terminal-window {
+    transform: scale(0.75);
+  }
+}

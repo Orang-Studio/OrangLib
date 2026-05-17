@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'Minecraftia';
+  src: url('/fonts/Minecraftia.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Minecraftia', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #1a1a1f;
+  color: #e0e0e0;
+  min-height: 100vh;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+}
+:root {
+  --bg-primary: #1a1a1f;
+  --bg-secondary: #141417;
+  --bg-card: #252528;
+  --bg-input: #2a2a2e;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --text-muted: #707070;
+  --accent-orange: #ff8c00;
+  --border-color: #3a3a3e;
+}
+#root {
+  min-height: 100vh;
+}
+@media (max-width: 768px) {
+  button, a, input, select, textarea {
+    min-height: 44px;
+  }
+  input, select, textarea {
+    font-size: 16px; 
+  }
+}

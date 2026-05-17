@@ -1,0 +1,188 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+  animation: headerSlide 0.5s ease-out;
+}
+
+@keyframes headerSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sidebar-toggle {
+  background: linear-gradient(135deg, var(--bg-input) 0%, rgba(42, 42, 46, 0.8) 100%);
+  border: 1px solid rgba(255, 140, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-toggle:hover {
+  background: linear-gradient(135deg, var(--bg-card) 0%, rgba(50, 50, 55, 0.9) 100%);
+  border-color: rgba(255, 140, 0, 0.25);
+  box-shadow: 0 4px 12px rgba(255, 140, 0, 0.15);
+  transform: scale(1.05);
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, var(--bg-input) 0%, rgba(42, 42, 46, 0.8) 100%);
+  border: 2px solid rgba(255, 140, 0, 0.15);
+  border-radius: 8px;
+  padding: 12px 16px;
+  flex: 1;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar:focus-within {
+  border-color: rgba(255, 140, 0, 0.4);
+  box-shadow: 0 4px 16px rgba(255, 140, 0, 0.15), inset 0 0 8px rgba(255, 140, 0, 0.05);
+  background: linear-gradient(135deg, rgba(50, 50, 55, 0.9) 0%, rgba(45, 45, 50, 0.8) 100%);
+}
+
+.search-bar .search-icon-svg {
+  color: var(--text-muted);
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.search-bar:focus-within .search-icon-svg {
+  color: #ff8c00;
+}
+
+.search-bar input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 15px;
+  outline: none;
+  transition: color 0.2s ease;
+}
+
+.search-bar input::placeholder {
+  color: rgba(160, 160, 160, 0.5);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  animation: slideUp 0.5s ease-out;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: linear-gradient(135deg, rgba(42, 42, 46, 0.6) 0%, rgba(37, 37, 40, 0.4) 100%);
+  border: 1px solid rgba(255, 140, 0, 0.1);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.control-group:hover {
+  border-color: rgba(255, 140, 0, 0.2);
+  background: linear-gradient(135deg, rgba(50, 50, 55, 0.8) 0%, rgba(45, 45, 50, 0.6) 100%);
+}
+
+.control-label {
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown select {
+  appearance: none;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 14px;
+  padding-right: 20px;
+  cursor: pointer;
+  outline: none;
+  transition: color 0.2s ease;
+}
+
+.dropdown select:hover {
+  color: #ff8c00;
+}
+
+.dropdown select option {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+  font-family: inherit;
+}
+
+.dropdown-arrow {
+  position: absolute;
+  right: 0;
+  pointer-events: none;
+  color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+.dropdown select:hover ~ .dropdown-arrow {
+  color: #ff8c00;
+}
+
+@media (max-width: 768px) {
+  .header {
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+
+  .header-top {
+    gap: 8px;
+  }
+
+  .search-bar {
+    padding: 10px 12px;
+  }
+
+  .controls {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .control-group {
+    gap: 4px;
+  }
+
+  .control-label {
+    font-size: 12px;
+  }
+}
